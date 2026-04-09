@@ -1,0 +1,212 @@
+Done. All pages now have `<img>` tags with placeholder paths. Here's the complete list of images you need to add to the `images/` folder:
+
+**Hero & About (Sitewide)**
+| File | Suggested Size |
+|---|---|
+| `images/hero-bg.jpg` | 1920×800 |
+| `images/about-team.jpg` | 800×600 |
+
+**Service Cards** (used on index + services pages)
+| File | Suggested Size |
+|---|---|
+| `images/service-fire-safety.jpg` | 600×400 |
+| `images/service-industrial-safety.jpg` | 600×400 |
+| `images/service-security.jpg` | 600×400 |
+| `images/service-mep.jpg` | 600×400 |
+
+**Service Detail Hero** (one per service page)
+| File | Suggested Size |
+|---|---|
+| `images/service-fire-safety-hero.jpg` | 1200×400 |
+| `images/service-industrial-safety-hero.jpg` | 1200×400 |
+| `images/service-security-hero.jpg` | 1200×400 |
+| `images/service-mep-hero.jpg` | 1200×400 |
+
+**Industry Sections** (index + industries pages)
+| File | Suggested Size |
+|---|---|
+| `images/industry-manufacturing.jpg` | 800×500 |
+| `images/industry-construction.jpg` | 800×500 |
+| `images/industry-warehousing.jpg` | 800×500 |
+| `images/industry-commercial.jpg` | 800×500 |
+
+**Project Cards**
+| File | Suggested Size |
+|---|---|
+| `images/project-automotive-fire.jpg` | 700×400 |
+| `images/project-logistics-security.jpg` | 700×400 |
+| `images/project-itpark-mep.jpg` | 700×400 |
+| `images/project-chemical-safety.jpg` | 700×400 |
+| `images/project-textile-fire.jpg` | 700×400 |
+| `images/project-commercial-complex.jpg` | 700×400 |
+
+Just drop these 20 images into the `images/` folder and the site is ready. The CSS handles all sizing, `object-fit: cover` ensures no distortion, and all `<img>` tags have proper `alt` attributes for SEO.
+
+
+====================================
+
+
+
+Here's a production-readiness checklist. I can implement items **1–6** right now if you want:
+
+### Must-Do Before Launch
+
+| # | Task | Status |
+|---|---|---|
+| **1** | Replace `YOUR_FORM_ID` in contact.html with your real [Formspree](https://formspree.io) form ID | Manual |
+| **2** | Replace placeholder company details (name, phone, email, address) across all pages | Manual |
+| **3** | Add a **favicon** (`favicon.ico` + meta tags) | I can add |
+| **4** | Add **Open Graph / social sharing** meta tags (for WhatsApp/LinkedIn/Facebook previews) | I can add |
+| **5** | Add a `sitemap.xml` and `robots.txt` for search engines | I can create |
+| **6** | Add a `404.html` error page | I can create |
+
+### Image Optimization (Critical for Speed)
+
+- **Compress** all JPGs to ~80% quality using [TinyPNG](https://tinypng.com) or [Squoosh](https://squoosh.app)
+- **Resize** to the suggested dimensions from the previous list — don't upload 4000px-wide photos
+- Optionally convert to **WebP** format for smaller file size (works in all modern browsers)
+- Keep file sizes under **150KB each** ideally
+
+### Deployment Options
+
+| Platform | Cost | How |
+|---|---|---|
+| **Netlify** | Free | Drag & drop the folder at [app.netlify.com/drop](https://app.netlify.com/drop) |
+| **GitHub Pages** | Free | Push to a GitHub repo, enable Pages in settings |
+| **Vercel** | Free | Connect a GitHub repo |
+| **Shared hosting** (GoDaddy, Hostinger) | Paid | Upload via FTP/cPanel file manager |
+
+### Post-Deploy
+
+- **Custom domain** — point your domain's DNS to your hosting provider
+- **SSL certificate** — free with Netlify/Vercel/GitHub Pages (automatic), or use Let's Encrypt on shared hosting
+- **Google Analytics** — add a tracking script for visitor insights
+- **Google Search Console** — submit your `sitemap.xml` to get indexed
+- **Test** on mobile, tablet, and desktop in Chrome, Safari, Firefox, Edge
+
+---
+
+Want me to go ahead and implement **favicon support, Open Graph tags, sitemap.xml, robots.txt, and a 404 page** right now? I'll just need your:
+1. **Company name** (or keep "SafeGuard"?)
+2. **Website URL** you plan to use (e.g. `www.yourcompany.com`)
+
+=========================================================================================================
+
+
+All done. Here's exactly what you need to find-and-replace once you have your company name and URL:
+
+---
+
+### Things to Replace (use Ctrl+Shift+H in VS Code for global find & replace)
+
+| Find | Replace With | Where |
+|---|---|---|
+| `https://www.yourwebsite.com` | Your actual URL (e.g. `https://www.safeguardindustrial.com`) | All HTML pages, sitemap.xml, robots.txt |
+| `SafeGuard` | Your company name (if different) | All HTML pages |
+| `YOUR_FORM_ID` | Your Formspree form ID | contact.html only |
+| `+91 98765 43210` | Your real phone number | All pages (header, footer, contact) |
+| `info@safeguardindustrial.com` | Your real email | All pages |
+| `123 Industrial Area, Mumbai, Maharashtra, India` | Your real address | All pages |
+
+### Favicon Images to Add to `images/`
+
+| File | Size | How to Generate |
+|---|---|---|
+| `favicon-32x32.png` | 32x32 px | Use [favicon.io](https://favicon.io) or [realfavicongenerator.net](https://realfavicongenerator.net) |
+| `favicon-16x16.png` | 16x16 px | Same tool |
+| `apple-touch-icon.png` | 180x180 px | Same tool |
+| `og-image.jpg` | 1200x630 px | Company logo on branded background (for social sharing previews) |
+
+### What Was Added
+- **Favicon** meta tags on all 10 pages + 404.html
+- **Open Graph** tags on all 10 pages (title, description, image, URL)
+- sitemap.xml — lists all 10 pages for Google
+- robots.txt — allows all crawlers, points to sitemap
+- 404.html — clean error page with navigation back to the site
+
+======================================================
+
+
+```
+Done. A floating WhatsApp button now appears on every page — bottom-right corner with a green circle, WhatsApp icon, and a "Chat with us" tooltip on hover.
+
+**One thing to update:** In main.js, replace the phone number:
+
+```
+var whatsappNumber = '919876543210';
+```
+
+Change `919876543210` to your real WhatsApp number (country code `91` + 10-digit number, no spaces or dashes). The pre-filled message can also be customized on the next line.
+
+=====================================
+=====================================
+
+Everything is built. Here's your final checklist — all manual steps on your end:
+
+### Replace Placeholders (Ctrl+Shift+H in VS Code)
+
+| Find | Replace With | Files |
+|---|---|---|
+| `919876543210` | Your WhatsApp number | main.js |
+| `YOUR_FORM_ID` | Formspree ID (get from [formspree.io](https://formspree.io)) | contact.html |
+| `https://www.yourwebsite.com` | Your real URL | All HTML, sitemap.xml, robots.txt |
+| `+91 98765 43210` | Your real phone | All HTML |
+| `+91 22 2345 6789` | Your real landline (or remove) | contact.html |
+| `info@safeguardindustrial.com` | Your real email | All HTML |
+| `sales@safeguardindustrial.com` | Your real sales email (or remove) | contact.html |
+| `123 Industrial Area, Mumbai, Maharashtra, India` | Your real address | All HTML |
+| `SafeGuard` | Your company name (if different) | All HTML |
+
+### Add Files to `images/` Folder
+
+| File | Purpose |
+|---|---|
+| `favicon-16x16.png` | Browser tab icon |
+| `favicon-32x32.png` | Browser tab icon |
+| `apple-touch-icon.png` | iOS bookmark icon (180x180) |
+| `og-image.jpg` | Social sharing preview (1200x630) |
+| All 20 photos from the earlier list | Site content images |
+
+Generate favicons at [favicon.io](https://favicon.io) and compress photos at [tinypng.com](https://tinypng.com).
+
+### Update Google Maps Embed
+
+In contact.html, replace the `<iframe src="...">` with your actual office location embed from [Google Maps > Share > Embed](https://www.google.com/maps).
+
+### Deploy (pick one)
+
+| Platform | Steps |
+|---|---|
+| **Netlify** (easiest) | Go to [app.netlify.com/drop](https://app.netlify.com/drop), drag your `Website` folder |
+| **GitHub Pages** | Push to GitHub repo, Settings > Pages > Deploy from main branch |
+| **Vercel** | Connect GitHub repo at [vercel.com](https://vercel.com) |
+
+### After Deploy
+
+1. Point your custom domain's DNS to the hosting provider
+2. SSL is automatic on Netlify/Vercel/GitHub Pages
+3. Submit sitemap.xml to [Google Search Console](https://search.google.com/search-console)
+4. Optionally add Google Analytics tracking script
+
+**That's everything.** No code changes remain — just fill in your real details, drop in images, and deploy.
+
+========================================================
+
+```
+Done. Here's what changed:
+
+**How it works:**
+- Desktop: `<video>` autoplays muted, looping, with a dark overlay (`rgba(13,33,55,0.72)`) ensuring white text stays readable
+- Mobile (below 768px): video is hidden via `display: none`, the static `hero-bg.jpg` is shown instead for performance
+- The `poster="images/hero-bg.jpg"` attribute shows the image while the video loads
+
+**Add this file to `images/`:**
+
+| File | Format | Recommended |
+|---|---|---|
+| `images/hero-video.mp4` | H.264 MP4 | 10-30 seconds, 1920x1080, under 5MB |
+
+**Tips to compress the video:**
+- Use [HandBrake](https://handbrake.fr) — set CRF to 28-32, resolution 1920x1080
+- Or use [CloudConvert](https://cloudconvert.com/mp4-compressor) online
+- Keep it under **5MB** for fast loading — shorter clips loop better anyway
