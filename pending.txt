@@ -17,10 +17,10 @@ Done. All pages now have `<img>` tags with placeholder paths. Here's the complet
 **Service Detail Hero** (one per service page)
 | File | Suggested Size |
 |---|---|
-| `images/service-fire-safety-hero.jpg` | 1200×400 |
-| `images/service-industrial-safety-hero.jpg` | 1200×400 |
-| `images/service-security-hero.jpg` | 1200×400 |
-| `images/service-mep-hero.jpg` | 1200×400 |
+| `images/service-fire-safety-hero.jpg` | 800×500 or 900×600 |
+| `images/service-industrial-safety-hero.jpg` | 800×500 or 900×600 |
+| `images/service-security-hero.jpg` | 800×500 or 900×600 |
+| `images/service-mep-hero.jpg` | 800×500 or 900×600 |
 
 **Industry Sections** (index + industries pages)
 | File | Suggested Size |
@@ -210,3 +210,38 @@ Done. Here's what changed:
 - Use [HandBrake](https://handbrake.fr) — set CRF to 28-32, resolution 1920x1080
 - Or use [CloudConvert](https://cloudconvert.com/mp4-compressor) online
 - Keep it under **5MB** for fast loading — shorter clips loop better anyway
+
+
+
+===========================================
+Done. Here's how it works:
+
+**Navbar** — "Catalogue" button (outlined orange) opens the PDF **in a new tab** for viewing  
+**Footer** — "Download Catalogue" button triggers a **direct download**
+
+Both link to the same file: `documents/catalogue.pdf`
+
+**What you need to do:**
+1. Place your PDF file at `documents/catalogue.pdf`
+2. Keep it under **10MB** for fast downloads (compress at [ilovepdf.com](https://www.ilovepdf.com/compress_pdf) if needed)
+===================================================
+
+```
+Done. Here's what was added:
+
+**Services (now 6):** +Annual Maintenance, +Safety Audits & Consulting  
+**Industries (now 6):** +Oil & Gas, +Healthcare  
+**Testimonials (now 5):** +Meena Iyer (Pharma), +Vikram Singh (Construction)
+
+All center nicely: 4 in the first row, 2 centered below.
+
+**New images to add to images:**
+
+| File | Size |
+|---|---|
+| `images/service-annual-maintenance.jpg` | 600×400 |
+| `images/service-safety-audit.jpg` | 600×400 |
+| `images/industry-oil-gas.jpg` | 600×400 |
+| `images/industry-healthcare.jpg` | 600×400 |
+================================================
+

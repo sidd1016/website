@@ -90,6 +90,18 @@ img {
   color: var(--accent);
 }
 
+/* Image Logo — uncomment when logo is ready, hide .logo text */
+.logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.footer .logo-img {
+  height: 40px;
+  margin-bottom: 16px;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -139,6 +151,47 @@ img {
 .nav-cta:hover {
   background: var(--accent-hover);
   color: var(--white) !important;
+}
+
+/* Catalogue Button */
+.nav-catalogue {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: var(--accent) !important;
+  border: 2px solid var(--accent);
+  padding: 8px 18px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.nav-catalogue::after {
+  display: none !important;
+}
+
+.nav-catalogue:hover {
+  background: var(--accent);
+  color: var(--white) !important;
+}
+
+.footer-catalogue {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 10px 20px;
+  background: var(--accent);
+  color: var(--white);
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.footer-catalogue:hover {
+  background: var(--accent-hover);
 }
 
 /* Mobile Menu Toggle */
@@ -243,16 +296,54 @@ img {
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  width: 48px;
-  height: 48px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
+  gap: 0;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.hero-scroll-arrow:hover {
+  opacity: 0.7;
+}
+
+.scroll-chevrons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
   animation: bounceArrow 2s infinite;
+}
+
+.scroll-chevrons svg {
+  display: block;
+  opacity: 0.5;
+  margin-top: -6px;
+}
+
+.scroll-chevrons svg:first-child {
+  opacity: 0.35;
+  margin-top: 0;
+}
+
+.scroll-chevrons svg:last-child {
+  opacity: 0.9;
+}
+
+.scroll-text {
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 4px;
+  opacity: 0.8;
+}
+
+@keyframes bounceArrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
 }
 
 /* ===== Buttons ===== */
@@ -340,8 +431,9 @@ img {
 
 /* ===== Services Grid ===== */
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 28px;
 }
 
@@ -352,6 +444,9 @@ img {
   box-shadow: var(--shadow);
   transition: all var(--transition);
   border: 1px solid transparent;
+  width: calc(25% - 21px);
+  min-width: 260px;
+  flex-grow: 0;
 }
 
 .service-card:hover {
@@ -374,7 +469,6 @@ img {
 }
 
 .service-card .card-img {
-  /* width: 100%; */
   display: block;
   width: calc(100% + 56px);
   max-width: none;
@@ -382,7 +476,6 @@ img {
   object-fit: cover;
   border-radius: var(--radius) var(--radius) 0 0;
   margin: -36px -28px 20px -28px;
-  /* width: calc(100% + 56px); */
 }
 
 .service-card h3 {
@@ -519,8 +612,9 @@ img {
 
 /* ===== Industries ===== */
 .industries-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
 }
 
@@ -531,6 +625,9 @@ img {
   text-align: center;
   box-shadow: var(--shadow);
   transition: all var(--transition);
+  width: calc(25% - 18px);
+  min-width: 240px;
+  flex-grow: 0;
 }
 
 .industry-card:hover {
@@ -566,13 +663,17 @@ img {
 
 /* ===== Testimonials ===== */
 .testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 28px;
 }
 
 .testimonial-card {
   background: var(--white);
+  width: calc(33.333% - 19px);
+  min-width: 320px;
+  flex-grow: 0;
   padding: 32px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -815,7 +916,6 @@ img {
   display: block;
   width: 100%;
   max-width: none;
-  /* height: 280px; */
   height: 360px;
   object-fit: cover;
   border-radius: var(--radius);
