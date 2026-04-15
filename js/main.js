@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ===== WhatsApp Floating Button =====
   // CHANGE: Replace 919876543210 with your real WhatsApp number (country code + number, no spaces/dashes)
-  var whatsappNumber = '919876543210';
+  var whatsappNumber = '919642403230';
   var whatsappMessage = encodeURIComponent('Hi, I am interested in your industrial safety services. Please share more details.');
 
   var whatsappBtn = document.createElement('a');
