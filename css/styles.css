@@ -72,7 +72,28 @@ img {
   transition: background var(--transition), box-shadow var(--transition);
 }
 
+/*.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}*/
+
+/* .header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+
+  padding-left: -15px;
+  padding-right: 40px;
+} */
+
+
 .header .container {
+  max-width: 100%;
+  padding: 0 50px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -92,13 +113,13 @@ img {
 
 /* Image Logo — uncomment when logo is ready, hide .logo text */
 .logo-img {
-  height: 44px;
+  height: 70px;
   width: auto;
   display: block;
 }
 
 .footer .logo-img {
-  height: 40px;
+  height: 70px;
   margin-bottom: 16px;
 }
 
